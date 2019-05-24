@@ -1,2 +1,5 @@
 venv/*
 .vscode/*
+config.py
+.cache-isaacinator
+__pycache__/
