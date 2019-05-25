@@ -1,8 +1,9 @@
 from spotify_current_track import SpotifyCurrentTrack
 
-# from gpiozero import Servo
+from gpiozero import Servo
 import time
-# servo = Servo(17)
+from time import sleep
+servo = Servo(17)
 
 # setup
 time_last_update = time.time()
@@ -38,9 +39,8 @@ while True:
         time_last_update = time.time()
         print('reset time last update')
 
-
-# # rotate servo on the beat of the music
-# servo.min()
-# sleep(60/track.bpm)
-# servo.max()
-# # sleep(60/track.bpm)
+    # rotate servo on the beat of the music
+    servo.value(0.2)
+    sleep(60/track.bpm)
+    servo.value(0.2)
+    sleep(60/track.bpm)
