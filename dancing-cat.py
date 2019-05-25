@@ -1,9 +1,9 @@
 from spotify_current_track import SpotifyCurrentTrack
 
-from gpiozero import Servo
+from gpiozero import AngularServo
 import time
 from time import sleep
-servo = Servo(17)
+servo = AngularServo(17, min_angle=-20, max_angle=20)
 
 # setup
 time_last_update = time.time()
@@ -40,7 +40,7 @@ while True:
         print('reset time last update')
 
     # rotate servo on the beat of the music
-    servo.value(0.2)
+    servo.angle = -20
     sleep(60/track.bpm)
-    servo.value(0.2)
+    servo.angle = 20
     sleep(60/track.bpm)
