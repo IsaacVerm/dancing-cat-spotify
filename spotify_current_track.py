@@ -21,7 +21,6 @@ class SpotifyCurrentTrack:
         audio_features = self.spotify_client.audio_features(
             tracks=[self.song_id])
         self.bpm = audio_features[0]['tempo']
-        print(self.bpm)
 
 
 
