@@ -3,3 +3,4 @@ venv/*
 config.py
 .cache-isaacinator
 __pycache__/
+bpm.txt

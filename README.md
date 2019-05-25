@@ -46,6 +46,18 @@ If you connect to the raspberry pi using ssh you don't have access to the browse
 * get bpm of currently playing track
 * move servo matching the bpm
 
+# Running multiple processes at the same time
+
+An issue arises because two things happen at the same time:
+
+- the servo switches back and forth on the rhythm of the beat
+- the bpm for each track is fetched every x seconds
+
+It's best to keep the two separate. If this is not the case every x seconds the servo just stops working because the raspberry pi is busy fetching the updated bpm.
+
+The issue is solved by running a program [in the background](https://raspberrypi.stackexchange.com/questions/45933/running-multiple-programs-at-once).
+
+
 # to document
 
 Make sure to install both RPi.GPIO and gpiozero on python3 (included by default in python2)
