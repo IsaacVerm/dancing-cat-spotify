@@ -45,3 +45,13 @@ If you connect to the raspberry pi using ssh you don't have access to the browse
 * get currently playing track on spotify
 * get bpm of currently playing track
 * move servo matching the bpm
+
+# to document
+
+Make sure to install both RPi.GPIO and gpiozero on python3 (included by default in python2)
+https://github.com/RPi-Distro/python-gpiozero/issues/300
+
+```
+pip install RPi.GPIO
+pip install gpiozero
+```
