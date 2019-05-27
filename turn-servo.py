@@ -3,7 +3,8 @@ import time
 from time import sleep
 
 # initialize servo
-servo = AngularServo(17, min_angle=-20, max_angle=20)
+servo_one = AngularServo(17, min_angle=-20, max_angle=20)
+servo_two = AngularServo(27, min_angle=-20, max_angle=20)
 
 # read bpm for the first time
 bpm_file = open('bpm.txt', 'r')
@@ -25,7 +26,9 @@ while True:
         time_last_update = time.time()
 
     # rotate servo on the beat of the music
-    servo.angle = -20
+    servo_one.angle = -20
+    servo_two.angle = 20
     sleep(60/bpm)
-    servo.angle = 20
+    servo_one.angle = 20
+    servo_two.angle = -20
     sleep(60/bpm)
