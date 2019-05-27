@@ -73,3 +73,7 @@ https://github.com/RPi-Distro/python-gpiozero/issues/300
 pip install RPi.GPIO
 pip install gpiozero
 ```
+
+how to connect automatically
+
+https://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/

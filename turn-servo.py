@@ -1,4 +1,4 @@
-from gpiozero import AngugitlarServo
+from gpiozero import AngularServo
 import time
 from time import sleep
 
@@ -27,8 +27,8 @@ while True:
 
     # rotate servo on the beat of the music
     servo_one.angle = -20
-    servo_two.angle = 20
+    servo_two.angle = 10
     sleep(60/bpm)
     servo_one.angle = 20
-    servo_two.angle = -20
+    servo_two.angle = -10
     sleep(60/bpm)
