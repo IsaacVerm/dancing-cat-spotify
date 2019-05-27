@@ -57,6 +57,12 @@ It's best to keep the two separate. If this is not the case every x seconds the 
 
 The issue is solved by running a program [in the background](https://raspberrypi.stackexchange.com/questions/45933/running-multiple-programs-at-once). Variables are shared between the `update-bpm` and `turn-servo` scripts by writing to the `bpm.txt` file. The complete process of opening the file, writing the bpm and closing the file again takes about 4 ms so nothing to worry about.
 
+In order to run the application use:
+
+```
+python update-bpm.py & python turn-servo.py
+```
+
 
 # to document
 

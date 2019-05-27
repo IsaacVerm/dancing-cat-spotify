@@ -1,4 +1,4 @@
-from gpiozero import AngularServo
+from gpiozero import AngugitlarServo
 import time
 from time import sleep
 
